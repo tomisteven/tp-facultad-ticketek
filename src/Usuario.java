@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Usuario del sistema (equivalente a tu Cliente, 
+ * Usuario del sistema (equivalente a tu Cliente,
  * pero alineado con la interfaz ITicketek).
  */
 public class Usuario {

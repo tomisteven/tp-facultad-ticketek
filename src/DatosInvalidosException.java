@@ -1,10 +1,5 @@
-
-public class DatosInvalidosException extends Exception {
-
-	public DatosInvalidosException(String string) {
-		// TODO Auto-generated constructor stub
-	}
-
-	
-
+public class DatosInvalidosException extends RuntimeException {
+    public DatosInvalidosException(String mensaje) {
+        super(mensaje);
+    }
 }

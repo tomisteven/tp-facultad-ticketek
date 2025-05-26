@@ -2,61 +2,63 @@
 import java.util.List;
 
 /**
- * Interfaz del sistema Ticketek según el enunciado.
+ * Interfaz del sistema Ticketek segï¿½n el enunciado.
  */
 public interface ITicketek {
 
     // 1) Registra las sedes que no tienen asientos (Estadios)
     void registrarSede(String nombre, String direccion, int capacidadMaxima);
 
+    void getSedes();
+
     // 1) Registra las sedes con asientos y sin puestos de venta (Teatros)
     void registrarSede(String nombre,
-                       String direccion,
-                       int capacidadMaxima,
-                       int asientosPorFila,
-                       String[] sectores,
-                       int[] capacidad,
-                       int[] porcentajeAdicional);
+            String direccion,
+            int capacidadMaxima,
+            int asientosPorFila,
+            String[] sectores,
+            int[] capacidad,
+            int[] porcentajeAdicional);
 
     // 1) Registra las sedes con asientos y puestos de venta (MiniEstadios)
     void registrarSede(String nombre,
-                       String direccion,
-                       int capacidadMaxima,
-                       int asientosPorFila,
-                       int cantidadPuestos,
-                       double precioConsumicion,
-                       String[] sectores,
-                       int[] capacidad,
-                       int[] porcentajeAdicional);
+            String direccion,
+            int capacidadMaxima,
+            int asientosPorFila,
+            int cantidadPuestos,
+            double precioConsumicion,
+            String[] sectores,
+            int[] capacidad,
+            int[] porcentajeAdicional);
 
     // 2) Registrar un nuevo usuario en el sistema
     void registrarUsuario(String email, String nombre, String apellido, String contrasenia);
 
-    // 3) Registrar un nuevo espectáculo en el sistema
+    // 3) Registrar un nuevo espectï¿½culo en el sistema
     void registrarEspectaculo(String nombre);
 
-    // 14) Agregar una función nueva a un espectáculo ya registrado
+    // 14) Agregar una funciï¿½n nueva a un espectï¿½culo ya registrado
     void agregarFuncion(String nombreEspectaculo, String fecha, String sede, double precioBase);
 
     // 4) Vende entradas para sedes no numeradas
     List<IEntrada> venderEntrada(String nombreEspectaculo,
-                                 String fecha,
-                                 String email,
-                                 String contrasenia,
-                                 int cantidadEntradas);
+            String fecha,
+            String email,
+            String contrasenia,
+            int cantidadEntradas);
 
     // 4) Vende entradas para sedes numeradas
     List<IEntrada> venderEntrada(String nombreEspectaculo,
-                                 String fecha,
-                                 String email,
-                                 String contrasenia,
-                                 String sector,
-                                 int[] asientos);
+            String fecha,
+            String email,
+            String contrasenia,
+            String sector,
+            int[] asientos);
 
-    // 5) Listar las funciones de un espectáculo
+    // 5) Listar las funciones de un espectï¿½culo
     String listarFunciones(String nombreEspectaculo);
 
-    // 15) Listar todas las entradas vendidas de un espectáculo
+    // 15) Listar todas las entradas vendidas de un espectï¿½culo
     List<IEntrada> listarEntradasEspectaculo(String nombreEspectaculo);
 
     // 6) Listar todas las entradas futuras de un usuario
@@ -68,14 +70,14 @@ public interface ITicketek {
     // 8) Anular una entrada comprada por el usuario
     boolean anularEntrada(IEntrada entrada, String contrasenia);
 
-    // 9) Cambiar una entrada (cambia fecha y ubicación)
+    // 9) Cambiar una entrada (cambia fecha y ubicaciï¿½n)
     IEntrada cambiarEntrada(IEntrada entrada,
-                            String contrasenia,
-                            String fecha,
-                            String sector,
-                            int asiento);
+            String contrasenia,
+            String fecha,
+            String sector,
+            int asiento);
 
-    // 9) Cambiar una entrada (solo fecha, misma ubicación)
+    // 9) Cambiar una entrada (solo fecha, misma ubicaciï¿½n)
     IEntrada cambiarEntrada(IEntrada entrada, String contrasenia, String fecha);
 
     // 11) Costo de una entrada en un estadio (no numerada)
@@ -84,9 +86,9 @@ public interface ITicketek {
     // 11) Costo de una entrada en una sede numerada
     double costoEntrada(String nombreEspectaculo, String fecha, String sector);
 
-    // 12) Total recaudado hasta el momento por un espectáculo
+    // 12) Total recaudado hasta el momento por un espectï¿½culo
     double totalRecaudado(String nombreEspectaculo);
 
-    // 13) Total recaudado por una sede en un espectáculo
+    // 13) Total recaudado por una sede en un espectï¿½culo
     double totalRecaudadoPorSede(String nombreEspectaculo, String nombreSede);
 }

@@ -1,8 +1,9 @@
 
-
-
 public interface IEntrada {
     String getCodigo();
+
     double getPrecioFinal();
-    // otros getters que necesites…
+
+    // otros getters que necesitesï¿½
+    double precio();
 }

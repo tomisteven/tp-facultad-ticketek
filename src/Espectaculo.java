@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Espectáculo, contiene lista de funciones.
+ * Espectï¿½culo, contiene lista de funciones.
  */
 public class Espectaculo {
     private String nombre;
@@ -13,12 +13,23 @@ public class Espectaculo {
         this.funciones = new ArrayList<>();
     }
 
-    public String getNombre() { return nombre; }
-    public List<Funcion> getFunciones() { return funciones; }
+    public String getNombre() {
+        return nombre;
+    }
 
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public List<Funcion> getFunciones() {
+        return funciones;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public void agregarFuncion(Funcion f) {
         this.funciones.add(f);
+    }
+
+    public Number ofFunciones() {
+        return funciones.size();
     }
 }

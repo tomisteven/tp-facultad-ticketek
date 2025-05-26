@@ -1,5 +1,5 @@
-
-
+import java.util.Collections;
+import java.util.List;
 
 public abstract class Sede {
     protected String nombre;
@@ -16,10 +16,24 @@ public abstract class Sede {
         return nombre;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+    /** Lista de sectores; para sedes no numeradas, vacía */
+    public List<Sector> getSectores() {
+        return Collections.emptyList();
+    }
+
+
+
     public abstract boolean esNumerada();
 
-	public double calcularPrecio(double precioBase, String tipoSector) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    public double calcularPrecio(double precioBase, String tipoSector) {
+
+        return 0;
+    }
 }

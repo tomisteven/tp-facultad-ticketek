@@ -4,10 +4,10 @@ import java.util.List;
 public class Teatro extends Sede {
     private int asientosPorFila;
     private List<Sector> sectores;
-    private int[] porcentajeAdicional; 
+    private int[] porcentajeAdicional;
 
     public Teatro(String nombre, String direccion, int capacidadMaxima,
-                  int asientosPorFila, List<Sector> sectores, int[] porcentajeAdicional) {
+            int asientosPorFila, List<Sector> sectores, int[] porcentajeAdicional) {
         super(nombre, direccion, capacidadMaxima);
         this.asientosPorFila = asientosPorFila;
         this.sectores = sectores;
@@ -15,13 +15,20 @@ public class Teatro extends Sede {
     }
 
     @Override
-    public boolean esNumerada() { return true; }
+    public boolean esNumerada() {
+        return true;
+    }
+
+     @Override
+    public List<Sector> getSectores() {
+        return sectores;
+    }
 
     @Override
     public double calcularPrecio(double precioBase, String tipoSector) {
-        // lógica de recargos según el sector...
+        // lï¿½gica de recargos segï¿½n el sector...
         return 0;
     }
 
-    // getters/setters…
+    // getters/settersï¿½
 }

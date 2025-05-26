@@ -22,14 +22,18 @@ public class MiniEstadio extends Sede {
         this.porcentajeAdicional = porcentajeAdicional;
     }
 
+    public List<Sector> getSectores() {
+    return sectores;
+}
+
     @Override
     public boolean esNumerada() { return true; }
 
     @Override
     public double calcularPrecio(double precioBase, String tipoSector) {
-        // recargo + consumición libre…
+        // recargo + consumiciï¿½n libreï¿½
         return 0;
     }
 
-    // getters/setters…
+    // getters/settersï¿½
 }
